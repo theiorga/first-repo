@@ -1,2 +1,4 @@
-# first-repo
-My first repo
+# Hi! My name is Theo.
+
+I love *skating*
+
