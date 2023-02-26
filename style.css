@@ -1,0 +1,103 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  background-color: rgb(206, 74, 177);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(206, 74, 177);
+}
+
+.nav {
+  display: block;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.nav_title {
+  font-family: "Courier New", monospace;
+  font-size: 3rem;
+  background-color: rgba(215, 235, 253, 0.74);
+}
+
+.flex_section {
+  display: flex;
+  justify-content: space-evenly;
+  width: min(100% - 2rem, 1700px);
+  margin-inline: auto;
+  align-items: center;
+  padding: 6rem 0;
+}
+.flex_heading {
+  font-family: "Courier New", monospace;
+  font-size: 4rem;
+  max-width: 30ch;
+}
+.flex_image {
+  min-width: 30%;
+}
+.flex_image img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav_title {
+    float: left;
+    padding: 1rem 2rem;
+  }
+  .nav_links {
+    position: absolute;
+    left: 60vw;
+    padding: 1rem 2rem;
+    float: right;
+  }
+  .nav_links ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .nav_links ul div {
+    display: inline-block;
+    margin-left: 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_title {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .nav_links {
+    width: 100%;
+  }
+  .nav_links ul {
+    display: block;
+    margin-left: -2rem;
+  }
+  .nav_links ul a {
+    display: block;
+    padding: 1.5rem;
+  }
+  .flex_section {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .flex_heading {
+    text-align: center;
+  }
+  .flex_image {
+    padding: 0 8rem;
+  }
+  .flex_image img {
+    width: 100%;
+    height: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

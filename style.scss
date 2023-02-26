@@ -1,0 +1,112 @@
+
+* , *::before, *::after{
+  box-sizing: border-box;
+  background-color: rgb(206, 74, 177);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    background-color: rgb(206, 74, 177);
+}
+
+.nav{
+    display: block;
+    margin-top: 2rem;
+    font-size: 2rem;
+  &_title {
+      font-family: 'Courier New', monospace;
+      font-size: 3rem;
+      background-color: rgba(215, 235, 253, 0.74);
+  }}
+
+.flex {
+    &_section {
+       display: flex;
+       justify-content: space-evenly;
+       width: min(100% - 2rem, 1700px);
+       margin-inline: auto;
+       align-items: center;
+       padding: 6rem  0;
+    }
+    &_heading {
+       font-family: 'Courier New', monospace;
+       font-size: 4rem;
+       max-width: 30ch;
+    }
+    &_image { 
+        min-width: 30%;
+        img {
+           width: 100%;
+           height: auto;
+    }
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+.nav {
+&_title {
+    float: left;
+    padding: 1rem 2rem;
+}  
+&_links {
+    position: absolute;
+    left: 60vw;
+    padding: 1rem 2rem;
+    float: right;
+    & ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        div {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+    }
+    
+}
+}
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        &_title {
+           display: block;
+           text-align: center;
+           padding: 1.5rem;
+           margin-bottom: 1.5rem;
+
+        }
+        &_links { ul {
+           display: block;
+           margin-left: -2rem;
+           & a {
+             display: block;
+             padding: 1.5rem;
+           }}
+           width: 100%;
+        }
+    }
+
+    .flex {
+        &_section {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        &_heading {
+            text-align: center;
+        }
+        &_image{ 
+            padding: 0 8rem;
+            img {
+               width: 100%;
+               height: auto;
+        }
+        }
+    }
+}
