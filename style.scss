@@ -18,7 +18,12 @@ body {
            font-family: 'Courier New', monospace;
            font-size: 3rem;
            background-color: rgba(215, 235, 253, 0.74);
-  }}
+           animation: fade-in-right 1.5s forwards;
+  }
+    &_links {
+        animation: fade-in-left 1.5s forwards;
+    }
+}
 
 .flex {
     &_section {
@@ -28,6 +33,7 @@ body {
        margin-inline: auto;
        align-items: center;
        padding: 6rem  0;
+       animation: fade-in-right 1.5s forwards;
     }
     &_heading {
        font-family: 'Courier New', monospace;
@@ -108,3 +114,27 @@ justify-content: space-between;
         }
     }
 }
+
+@keyframes fade-in-right {
+    0% {
+      transform: translateX(-20%);
+      opacity: 0;
+    }
+   
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-left {
+    0% {
+      transform: translateX(20%);
+      opacity: 0;
+    }
+   
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

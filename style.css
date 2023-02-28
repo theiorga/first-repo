@@ -18,6 +18,10 @@ body {
   font-family: "Courier New", monospace;
   font-size: 3rem;
   background-color: rgba(215, 235, 253, 0.74);
+  animation: fade-in-right 1.5s forwards;
+}
+.nav_links {
+  animation: fade-in-left 1.5s forwards;
 }
 
 .flex_section {
@@ -27,6 +31,7 @@ body {
   margin-inline: auto;
   align-items: center;
   padding: 6rem 0;
+  animation: fade-in-right 1.5s forwards;
 }
 .flex_heading {
   font-family: "Courier New", monospace;
@@ -98,5 +103,25 @@ body {
   .flex_image img {
     width: 100%;
     height: auto;
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
